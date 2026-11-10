@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:if="${books.isEmpty()}">Inga böcker existerar för detta genren </p>
+<li th:each="b : ${books} ">
+    <span th:text="${b.getGenre()}"></span>
+    <span th:text="${b.getAuthor()}"></span>
+    <span th:text="${b.getTitle()}"></span>
+</li>
+</body>
+</html>

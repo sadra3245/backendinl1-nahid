@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang=""><head>
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="b : ${books}">
+        <span th:text="${b.getTitle()}"></span>
+        <br>
+        <span>By</span>
+        <span th:text="${b.getAuthor()}"> </span>
+        <br>
+        <span>Genre Type </span>
+        <span th:text="${b.getGenre()}"></span>
+
+</ul>
+</body>
+</html>
